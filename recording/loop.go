@@ -25,7 +25,6 @@ package recording
 import (
 	"github.com/moikot/smartthings-metrics/extracting"
 	"github.com/moikot/smartthings-metrics/readers"
-	"github.com/prometheus/common/log"
 	"github.com/sirupsen/logrus"
 	"time"
 )
@@ -56,7 +55,7 @@ func (l *Loop) Start() {
 		for {
 			err := l.record()
 			if err != nil {
-				log.Error(err)
+				l.log.Error(err)
 			}
 			time.Sleep(time.Duration(l.interval) * time.Second)
 		}
