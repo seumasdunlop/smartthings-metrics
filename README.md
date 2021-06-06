@@ -1,5 +1,5 @@
 # SmartThings metrics
-![ci](https://github.com/seumasdunlop/smartthings-metrics/workflows/ci/badge.svg)
+![ci](https://github.com/seumasdunlop/smartthings-metrics2/workflows/ci/badge.svg)
 
 A micro-service that provides SmartThings metrics to Prometheus.
 
@@ -18,7 +18,7 @@ For this service to have access to SmartThings API, you need to provide it with 
   * [Golang >=1.14](https://golang.org/doc/install)
 
 ```bash
-$ go get github.com/seumasdunlop/smartthings-metrics
+$ go get github.com/seumasdunlop/smartthings-metrics2
 $ smartthings-metrics -token [Smarthings-API-token]
 $ curl localhost:9153/metrics
 ```

@@ -1,6 +1,6 @@
 FROM golang:1.14
 
-RUN go get -u github.com/seumasdunlop/smartthings-metrics
+RUN go get -u github.com/seumasdunlop/smartthings-metrics2
 
 WORKDIR /go/bin
 

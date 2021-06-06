@@ -28,7 +28,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/moikot/smartthings-go/client/capabilities"
 	"github.com/moikot/smartthings-go/models"
-	"github.com/seumasdunlop/smartthings-metrics/caching"
+	"github.com/seumasdunlop/smartthings-metrics2/caching"
 	"github.com/patrickmn/go-cache"
 	"time"
 )

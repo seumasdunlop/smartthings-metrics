@@ -25,7 +25,7 @@ package extracting
 import (
 	"fmt"
 	"github.com/moikot/smartthings-go/models"
-	"github.com/seumasdunlop/smartthings-metrics/readers"
+	"github.com/seumasdunlop/smartthings-metrics2/readers"
 	"github.com/sirupsen/logrus"
 )
 

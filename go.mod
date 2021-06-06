@@ -1,4 +1,4 @@
-module github.com/seumasdunlop/smartthings-metrics
+module github.com/seumasdunlop/smartthings-metrics2
 
 go 1.14
 
