@@ -1,24 +1,9 @@
-FROM --platform=$BUILDPLATFORM golang:1.14 as build-env
+FROM golang:1.14
 
-# xx wraps go to automatically configure $GOOS, $GOARCH, and $GOARM
-# based on TARGETPLATFORM provided by Docker.
-COPY --from=tonistiigi/xx:golang / /
+RUN go get -u github.com/seumasdunlop/smartthings-metrics
 
-ARG APP_FOLDER
+WORKDIR /go/bin
 
-ADD . ${APP_FOLDER}
-WORKDIR ${APP_FOLDER}
+COPY ./units.json /go/bin
 
-# Compile independent executable using go wrapper from xx:golang
-ARG TARGETPLATFORM
-RUN CGO_ENABLED=0 go build -a -o /bin/main .
-
-FROM scratch
-
-ARG APP_FOLDER
-
-COPY --from=build-env /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=build-env /bin/main /
-COPY --from=build-env ${APP_FOLDER}/units.json /
-
-ENTRYPOINT ["/main"]
+EXPOSE 9153
