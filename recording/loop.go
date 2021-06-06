@@ -23,8 +23,8 @@ SOFTWARE.
 package recording
 
 import (
-	"github.com/moikot/smartthings-metrics/extracting"
-	"github.com/moikot/smartthings-metrics/readers"
+	"github.com/seumasdunlop/smartthings-metrics/extracting"
+	"github.com/seumasdunlop/smartthings-metrics/readers"
 	"github.com/sirupsen/logrus"
 	"time"
 )

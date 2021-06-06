@@ -71,7 +71,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
           build-args: |
-            APP_FOLDER=/go/src/github.com/moikot/smartthings-metrics
+            APP_FOLDER=/go/src/github.com/seumasdunlop/smartthings-metrics
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.description=${{ github.event.repository.description }}
